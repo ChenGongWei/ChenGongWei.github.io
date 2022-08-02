@@ -1,0 +1,23 @@
+{
+  "name": "little_lu-blog",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "commit": "git add . && git-cz",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "config/path/to/my/config.js"
+    }
+  },
+  "dependencies": {
+    "commitizen": "^4.2.5",
+    "cz-customizable": "^6.9.1",
+    "vitepress": "^1.0.0-alpha.4"
+  }
+}
