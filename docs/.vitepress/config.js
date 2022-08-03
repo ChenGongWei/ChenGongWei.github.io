@@ -5,6 +5,7 @@ export default defineConfig({
     title: 'ChenGongWei',
     description: '陈晨的博客',
     base: '/', // 部署时的路径
+    lastUpdated: true,
 
     head: [
         ['link', { rel: 'icon', href: '/logo.jpeg' }],
@@ -21,21 +22,21 @@ export default defineConfig({
         // 头部导航
         nav: [
             { text: '首页', link: '/' },
-            { 
-                text: '前端', 
+            {
+                text: '前端',
                 items: [
                     { text: 'HTML', link: '/front-end/html/' },
                     { text: 'CSS', link: '/front-end/css/' },
                     { text: 'JavaScript', link: '/front-end/javascript/' },
                     { text: 'TypeScript', link: '/front-end/typescript/ts-study1' },
-                    { text: 'React', link: '/front-end/react/react-hook1' },
+                    { text: 'React', link: '/front-end/react/react-api1' },
                 ]
             },
             {
                 text: '其他',
                 items: [
                     { text: 'LeetCode', link: '/other/leetcode/leetcode1' },
-                    { text: 'GitHub', link: '/other/github/syncToGitee'}
+                    { text: 'GitHub', link: '/other/github/syncToGitee' }
                 ]
             },
             { text: '关于', link: '/about' },
@@ -65,7 +66,7 @@ export default defineConfig({
                         { text: 'React Api - hooks', link: '/front-end/react/react-api3' },
                         { text: 'React Api - react-dom', link: '/front-end/react/react-api4' },
                         { text: '自定义 hook 实现 redux', link: '/front-end/react/useRedux' },
-                        
+
                     ]
                 }
             ],
@@ -88,16 +89,21 @@ export default defineConfig({
                 }
             ]
         },
-        //社交链接
+        // 社交链接
         socialLinks: [
             { icon: 'github', link: 'https://github.com/ChenGongWei' },
             // { icon: 'twitter', link: 'https://twitter.com/TWI_XXGGG' },
             // { icon: 'instagram', link: 'https://www.instagram.com/xiexiage/' },
             // { icon: 'youtube', link: 'https://www.youtube.com/channel/UCjzdLs5HAhATbfZH6vaJCEA' },
         ],
-        //页脚
+        // 页脚
         footer: {
             copyright: 'Copyright © 2020-present 陈晨'
         },
+        editLink: {
+            pattern: 'https://github.com/ChenGongWei/ChenGongWei.github.io/edit/main/docs/:path',
+            text: '在GitHub上编辑此页'
+        },
+        lastUpdatedText: '上次更新',
     }
 })
