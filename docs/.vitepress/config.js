@@ -31,13 +31,19 @@ export default defineConfig({
                     { text: 'React', link: '/front-end/react/react-hook1' },
                 ]
             },
+            {
+                text: '其他',
+                items: [
+                    { text: 'Github', link: '/other/github/syncToGitee'}
+                ]
+            },
             { text: '关于', link: '/about' },
         ],
         // 侧边导航
         sidebar: {
             '/front-end/typescript': [
                 {
-                    text: '📔TypeScript学习笔记',
+                    text: 'TypeScript学习笔记',
                     collapsible: true,
                     items: [
                         { text: 'TS笔记（一）- 基础类型', link: '/front-end/typescript/ts-study1' },
@@ -61,7 +67,28 @@ export default defineConfig({
                         
                     ]
                 }
+            ],
+            '/other/github': [
+                {
+                    text: 'Github',
+                    collapsible: true,
+                    items: [
+                        { text: 'Github 代码同步 Gitee', link: '/other/github/syncToGitee' },
+                        
+                    ]
+                }
             ]
-        }
+        },
+        //社交链接
+        socialLinks: [
+            { icon: 'github', link: 'https://github.com/ChenGongWei' },
+            // { icon: 'twitter', link: 'https://twitter.com/TWI_XXGGG' },
+            // { icon: 'instagram', link: 'https://www.instagram.com/xiexiage/' },
+            // { icon: 'youtube', link: 'https://www.youtube.com/channel/UCjzdLs5HAhATbfZH6vaJCEA' },
+        ],
+        //页脚
+        footer: {
+            copyright: 'Copyright © 2020-present 陈晨'
+        },
     }
 })
