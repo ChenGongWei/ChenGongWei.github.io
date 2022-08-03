@@ -7,8 +7,13 @@ tags: [TypeScript, 学习笔记]
 categories: TypeScript学习笔记
 date: 2021-04-30 10:00:00
 ---
-## 1、TypeScript的interface接口
-### 1.1、interface的基本使用
+# TypeScript学习笔记（二）- 接口&类
+
+::: tip 摘录
+TypeScript的接口的基本使用及属性和方法的写法，类的构造函数、继承、重写、访问类型及静态属性和方法
+:::
+
+## 1.1、interface的基本使用
 interface可以作为类型注解：
 ```js
   interface Girl {
@@ -47,7 +52,7 @@ class类可以实现接口：
   }
 ```
 
-### 1.2、接口的可选值和任意值
+## 1.2、接口的可选值和任意值
 如上述例子，接口的属性都是固定必须有的，不够灵活，如果想让一个值成为可选值该怎么做呢？TypeScript为我们准备好了相应的办法，就是在`:`号前加一个`?`
 ```js
   interface Girl {
@@ -82,7 +87,7 @@ class类可以实现接口：
   }
 ```
 
-### 1.3、接口里的方法
+## 1.3、接口里的方法
 接口里不仅可以存属性，还可以存方法：
 ```js
   interface Girl {
@@ -105,8 +110,8 @@ class类可以实现接口：
 *注：接口当作变量的类型注解时，变量必须完全符合接口定义的规范，不得增加或减少；而当类实现接口时，可以在其基础上增加属性和方法，但不可减少。*
 
 
-## 2、TypeScript的类
-### 2.1、类的基本使用
+
+## 2.1、类的基本使用
 新建文件demo.ts，写入以下内容：
 ```js
   class Father {
@@ -121,7 +126,7 @@ class类可以实现接口：
 ```
 用`ts-node demo`运行，输出 "我是你父亲！"。
 
-### 2.2、类的继承
+## 2.2、类的继承
 TypeScript的继承和ES6的继承是一样的，也是用关键字extends进行继承。
 ```js
   class Father {
@@ -144,7 +149,7 @@ TypeScript的继承和ES6的继承是一样的，也是用关键字extends进行
 ```
 用`ts-node demo`运行，输出 "我是你父亲！" 和 "你是我儿子！"，说明继承起效果了。
 
-### 2.3、类的重写
+## 2.3、类的重写
 重写就是子类重新编写方法覆盖父类的方法：
 ```js
   class Father {
@@ -164,7 +169,7 @@ TypeScript的继承和ES6的继承是一样的，也是用关键字extends进行
 ```
 用`ts-node demo`运行，输出 "儿子"，说明父类的say方法被子类重写了。
 
-### 2.4、super关键字
+## 2.4、super关键字
 在TypeScript中，提供了一个关键字super，指向父类，可以通过super.prop或super.method()的方式调用父类的属性或方法：
 ```js
   class Father {
@@ -183,7 +188,7 @@ TypeScript的继承和ES6的继承是一样的，也是用关键字extends进行
   console.log(son.say());  // 输出 "父亲儿子"
 ```
 
-### 2.5、类的访问类型
+## 2.5、类的访问类型
 在TypeScript中，有三种访问类型：public、protected、private。
 public：允许属性或方法在类内外及子类使用，不写默认是public
 protected：允许属性或方法在类内及子类内使用
@@ -209,7 +214,7 @@ private：只允许在类内使用
   console.log(son.sayHi()); // sayHi的访问类型为public，可以在类的内外使用
 ```
 
-### 2.6、类的构造函数
+## 2.6、类的构造函数
 TypeScript提供构造函数，让我们可以在new出对象的时候通过参数的形式初始化对象
 ```js
   class Person {
@@ -232,7 +237,7 @@ TypeScript提供构造函数，让我们可以在new出对象的时候通过参�
   console.log(son.say()); // 输出"父类"
 ```
 
-### 2.7、类的Getter和Setter
+## 2.7、类的Getter和Setter
 如果在类里面定义了一个private私有属性，在类外是无法直接获取或修改该属性的，所以TypeScript给我们提供了Getter和Setter方法
 ```js
   class Person {
@@ -254,7 +259,7 @@ TypeScript提供构造函数，让我们可以在new出对象的时候通过参�
   console.log(person.name); // 输出"我是子类"
 ```
 
-### 2.8、类的static
+## 2.8、类的static
 正常情况下，我们要获取类里面的属性或方法，需要new一个对象，但是通过static修饰的属性和方法，
 可以直接用类进行获取，称为静态属性或静态方法：
 ```js

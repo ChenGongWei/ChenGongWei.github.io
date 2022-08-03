@@ -2,25 +2,25 @@
 layout: home
 
 hero:
-  name: ChenGongWei
-  text: 前端博客
+  name: 
+  text: W & L
   tagline: Give life to time
   actions:
     - theme: brand
-      text: Get Started
-      link: /typescript/ts-study1
+      text: TypeScript笔记
+      link: /front-end/typescript/ts-study1
     - theme: alt
-      text: View on GitHub
+      text: 我的 GitHub
       link: https://github.com/ChenGongWei
 
 features:
-  - icon: ⚡️
-    title: Vite, The DX that can't be beat
-    details: Lorem ipsum...
-  - icon: 🖖
-    title: Power of Vue meets Markdown
-    details: Lorem ipsum...
+  - icon: 💻
+    title: 前端
+    details: HTML、CSS、JavaScript、React、Vue
   - icon: 🛠️
-    title: Simple and minimal, always
-    details: Lorem ipsum...
+    title: 工程化
+    details: Webpack、Babel、Eslint、Git、CI/CD
+  - icon: 📦
+    title: 其他
+    details: Node、Nginx、Linux、SQL
 ---

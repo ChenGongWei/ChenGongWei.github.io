@@ -7,7 +7,11 @@ tags: [TypeScript, 学习笔记]
 categories: TypeScript学习笔记
 date: 2021-05-30 10:00:00
 ---
-> 如果一个目录下存在`tsconfig.json`文件，那么它以为着这个目录是TypeScript的根目录，`tsconfig.json`文件中指定了用来编译这个项目的根文件和编译选项。
+
+# tsconfig.json 配置文件
+
+> 如果一个目录下存在`tsconfig.json`文件，那么它意味着这个目录是`TypeScript`的根目录，`tsconfig.json`文件中指定了用来编译这个项目的根文件和编译选项。
+> 
 ## files、include和exclude 指定编译
 我们项目里一般都会有大量的`ts`文件，如果我们不想全部文件都编译，只想编译其中一部分，就可以用到`tsconfig.json`的这几个配置来实现：
  * 1、使用`files`配置

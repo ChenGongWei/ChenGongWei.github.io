@@ -7,6 +7,12 @@ tags: [TypeScript, 学习笔记]
 categories: TypeScript学习笔记
 date: 2021-05-19 10:00:00
 ---
+
+# TypeScript笔记(四) - 索引 / 映射类型 & 辅助泛型
+::: tip 摘录
+TypeScript的索引类型(keyof)、映射类型(in)及常用的辅助泛型Pick、Omit、Exclude、Extract...
+:::
+
 ## 索引类型（keyof）
 ```js
   function pluck(obj, keys) {

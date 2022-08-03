@@ -1,5 +1,5 @@
 ---
-title: TypeScript学习笔记（一）
+title: TS学习笔记（一）
 excerpt: TypeScript的基础静态类型、对象静态类型、类型注解、类型推断、数组类型定义及函数参数和返回类型定义
 index_img: https://little_lu.gitee.io/images/blog/typescript/ts1.jpg
 banner_img: https://little_lu.gitee.io/images/blog/typescript/ts1.jpg
@@ -7,7 +7,14 @@ tags: [TypeScript, 学习笔记]
 categories: TypeScript学习笔记
 date: 2021-04-27 10:00:00
 ---
+# TypeScript学习笔记（一）- 类型
+
+::: tip 摘录
+TypeScript的基础静态类型、对象静态类型、类型注解、类型推断、数组类型定义及函数参数和返回类型定义
+:::
+
 ## 1、第一个TypeScript Demo
+
 1. 新建一个文件 `demo1.ts` 
 2. 编写一个方法并执行：
    ```js
