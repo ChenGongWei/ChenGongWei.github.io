@@ -34,7 +34,8 @@ export default defineConfig({
             {
                 text: '其他',
                 items: [
-                    { text: 'Github', link: '/other/github/syncToGitee'}
+                    { text: 'LeetCode', link: '/leetcode/leetcode1' },
+                    { text: 'GitHub', link: '/other/github/syncToGitee'}
                 ]
             },
             { text: '关于', link: '/about' },

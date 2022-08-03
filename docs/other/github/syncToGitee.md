@@ -9,7 +9,7 @@
 > - GITEE_USERNAME 存放 Gitee 的账号；
 > - GITEE_PASSWORD 存放 Gitee 帐号的密码；
 
-![image.png](https://gitee.com/Little_Lu/images/raw/master/blog/github/github1.png)
+![image.png](img/github1.png)
 
 ## 创建 workflow
 > 在你的 GitHub 项目 **.github/workflows/** 文件夹下创建一个 .yml 文件，如 sync.yml，内容如下：
@@ -60,7 +60,7 @@ jobs:
 现在提交代码会自动执行 `workflows`，将代码同步到 `Gitee`
 
 同步 `workflows` 执行成功
-![image.png](https://gitee.com/Little_Lu/images/raw/master/blog/github/github2.png)
+![image.png](img/github2.png)
 
 `Github` 代码同步 `Gitee` 成功
-![image.png](https://gitee.com/Little_Lu/images/raw/master/blog/github/github3.png)
+![image.png](img/github3.png)
