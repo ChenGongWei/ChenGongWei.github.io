@@ -7,11 +7,11 @@ hero:
   tagline: Give life to time
   actions:
     - theme: brand
-      text: TypeScript笔记
-      link: /front-end/typescript/ts-study1
+      text: React 笔记
+      link: /front-end/react/react-api1
     - theme: alt
-      text: 我的 GitHub
-      link: https://github.com/ChenGongWei
+      text: TypeScript 笔记
+      link: /front-end/typescript/ts-study1
 
 features:
   - icon: 💻

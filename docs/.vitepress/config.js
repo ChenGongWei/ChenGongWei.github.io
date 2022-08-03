@@ -28,6 +28,7 @@ export default defineConfig({
                     { text: 'CSS', link: '/front-end/css/' },
                     { text: 'JavaScript', link: '/front-end/javascript/' },
                     { text: 'TypeScript', link: '/front-end/typescript/ts-study1' },
+                    { text: 'React', link: '/front-end/react/react-hook1' },
                 ]
             },
             { text: '关于', link: '/about' },
@@ -44,6 +45,20 @@ export default defineConfig({
                         { text: 'TS笔记（三）- 进阶类型', link: '/front-end/typescript/ts-study3' },
                         { text: 'TS笔记（四）- 高级类型', link: '/front-end/typescript/ts-study4' },
                         { text: 'TS笔记（五）- ts配置', link: '/front-end/typescript/ts-study5' },
+                    ]
+                }
+            ],
+            '/front-end/react': [
+                {
+                    text: 'React',
+                    collapsible: true,
+                    items: [
+                        { text: 'React Api - 组件类', link: '/front-end/react/react-api1' },
+                        { text: 'React Api - 工具类', link: '/front-end/react/react-api2' },
+                        { text: 'React Api - hooks', link: '/front-end/react/react-api3' },
+                        { text: 'React Api - react-dom', link: '/front-end/react/react-api4' },
+                        { text: '自定义 hook 实现 redux', link: '/front-end/react/useRedux' },
+                        
                     ]
                 }
             ]

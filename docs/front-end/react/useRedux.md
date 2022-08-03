@@ -8,7 +8,8 @@ categories: React学习笔记
 date: 2021-10-09 10:00:00
 ---
 
-### 两个自定义 `Hook` 替代 `React-Redux`
+# 两个自定义 Hook 实现 Redux
+
 小型项目使用 `React-Redux` 不太合适，所以就有了使用自定义 `Hook` 来解决 `React` 项目状态管理的问题的想法。
 两个自定义 `Hook` 分别是：
 * `useStore`：用于创建一个状态 `Store`，通过 `context` 传递给子组件
@@ -20,7 +21,7 @@ date: 2021-10-09 10:00:00
 * 维护并传递负责更新的 `dispatch` 方法
 * 暴露一些 `api` 给 `context`，传递给每一个 `useConnect`
   
-### useStore
+## useStore
 `useStore` 在靠近根组件的地方使用，为的是可以将创建的 `store` 传递给所有需要使用状态管理的子组件
 
 使用：
@@ -55,7 +56,7 @@ export function useStore(reducer:Function, initState:any) {
 }
 ```
 
-### ReduxHooksStore
+## ReduxHooksStore
 ```js
 /**
  * 状态管理类
@@ -161,7 +162,7 @@ class ReduxHooksStore {
 * `getInitState`：通过 `useConnect` 传入的函数来获取初始值
 * `exportStore`：将以上方法暴露给 `useConnect` 使用
 
-### useConnect
+## useConnect
 `useConnect` 在需要使用状态管理的组件上使用，可以订阅 `state`，获取改变 `state` 的 `dispatch`
 
 使用：
@@ -249,6 +250,6 @@ export function useConnect(mapStoreToState = (state:any) => {}) {
 * `publicRender` 触发注册的每一个 `connect` 的 `update` 函数
 * `update` 函数浅比较上一次缓存的 `state` 和最新的 `state`，发生变化则更新组件
 
-### 总结
+## 总结
 本文主要是通过两个自定义 `Hook` 实现状态管理功能来加深对 `React Hook` 的使用：
 [源码地址](https://github.com/ChenGongWei/useStore/blob/main/src/hooks/useRedux.ts)

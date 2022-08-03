@@ -8,13 +8,13 @@ categories: React学习笔记
 date: 2021-09-25 10:00:00
 ---
 
-## Hook
+# React API（Hooks）
 
 `Hook` 是 `React 16.8` 的新增特性，它可以让你在不编写 `class` 的情况下使用 `state` 以及其他的 `React` 特性。
 
 <img src="https://little_lu.gitee.io/images/blog/react/react-api/hooks.png" width="700px">
 
-### useState
+## useState
 每一个 `Hook` 都是 `useXXX` 的格式，`useState` 就是一个 `Hook`，它会给函数组件添加一些内部 `state`，`React` 在重复渲染的时候会保留这些 `state`。`useState` 接收一个参数作为初始值，以数组形式返回当前状态和更新它的函数，当初始值需要通过复杂计算获得时，可传入一个函数，在函数中返回初始值，该函数只会在初始渲染的时候被调用。
 
 ```js
@@ -45,7 +45,7 @@ const Index = () => {
 }
 ```
 
-### useEffect
+## useEffect
 `useEffect` 弥补了函数组件没有生命周期的缺点。我们可以在 `useEffect` 第一个参数回调函数中，做一些请求数据，事件监听等操作，第二个参数作为依赖项，当依赖项发生变化，重新执行第一个函数。
 
 ```js
@@ -81,7 +81,7 @@ const Counter = () => {
 
 `useEffect` 和 `useState` 一样都可以在组件中多次使用，你可以将不同逻辑拆分开来写在不同的 `useEffect` 里面。
 
-### useMemo
+## useMemo
 `useMemo` 接受两个参数，第一个是一个函数，返回值会被缓存，第二个参数是一个依赖项数组，只有当数组里的依赖项发生变化时，才会执行第一个函数更新值，如未提供依赖项数组，`useMemo` 会在每次渲染时都执行第一个函数更新值。
 
 ```js
@@ -112,7 +112,7 @@ const Index = () => {
 }
 ```
 
-### useCallback
+## useCallback
 `useCallback` 和 `useMemo` 接收的参数一样，作用也都是用来缓存数据；不同的是 `useMemo` 缓存的是第一个函数执行后返回的值，`useCallback` 缓存的是第一个函数。`useCallback` 返回的函数可以作为 `props` 属性传递给子组件，搭配 `memo` 使用可以避免子组件不必要的重渲染。
 
 ```js
@@ -149,7 +149,7 @@ const Index = () => {
 }
 ```
 
-### useRef
+## useRef
 `useRef` 返回一个可变的 `ref` 对象，其 `current` 属性值为初始化传入的参数，返回的 `ref` 对象在组件的整个生命周期内持续存在。我们可以用它来获取 `dom` 元素或组件实例，也可以用它来保存一些数据。
 
 ```js
@@ -172,7 +172,7 @@ const FocusInput = () => {
 }
 ```
 
-### useContext
+## useContext
 用 `createContext` 创建的 `context` 对象的值，除了能用 `Consumer` 接收外，还可以用 `useContext` 接收。`useContext` 接收一个 `context` 对象作为参数，并返回改对象当前值，当前值由上层组件中距离当前组件最近的 `Provider` 的 `value` 属性决定。当 `context` 的值发生更新时，该 `Hook` 会触发重渲染。
 
 ```js
@@ -201,7 +201,7 @@ const ProviderComponent = () => {
 }
 ```
 
-### useReducer
+## useReducer
 `useReducer` 的使用方法类似于 `Redux`，它接收两个参数，第一个参数是形如 `(state, action) => newState` 的 `reducer`函数，第二个参数是 `state` 的初始值，返回一个数组，第一项是 `state` 的值，第二项是派发更新的 `dispatch` 函数。
 ```js
 const MyContext = React.createContext<any>(null)
@@ -265,7 +265,7 @@ const UseReducer = () => {
 我们还可以通过 `context` 的方式将 `dispatch` 函数传递给子组件，这样避免了在组件树的每一层手动传递，而且在任意子节点都能通过 `useContext` 获取到 `dispatch` 函数。
 
 
-### useLayoutEffect
+## useLayoutEffect
 `useLayoutEffect` 的使用方法和 `useEffect` 差不多，只是执行时机不同：
 `useEffect`：组件更新挂载完成 -> 浏览器 `dom` 绘制完成 -> 执行 `useEffect` 回调
 `useLayoutEffect`：组件更新挂载完成 -> 执行 `useLayoutEffect` 回调 -> 浏览器 `dom` 绘制完成
@@ -286,7 +286,7 @@ const UseLayoutEffect = () => {
 }
 ```
 
-### useImperativeHandle
+## useImperativeHandle
 `useImperativeHandle` 可以配合 `forwardRef` 自定义子组件暴露给父组件的 `ref` 的实例值。`useImperativeHandle` 接受三个参数：
 * 第一个参数为 `ref` 对象
 * 第二个参数为函数，返回值作为 `ref` 的实例值暴露给父组件
@@ -342,7 +342,7 @@ const Index = () => {
 }
 ```
 
-### useDebugValue
+## useDebugValue
 `useDebugValue` 用于在 `React` 开发者工具中显示自定义 `hook` 的标签
 
 ```js

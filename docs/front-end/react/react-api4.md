@@ -8,13 +8,13 @@ categories: React学习笔记
 date: 2021-09-30 10:00:00
 ---
 
-## React-dom
+# React API（DOM）
 
 最后是 `React-dom` 部分比较重要的 `api`
 
 <img src="https://little_lu.gitee.io/images/blog/react/react-api/dom.png" width="700px">
 
-### render
+## render
 ```js
 ReactDOM.render(element, container[, callback])
 ```
@@ -50,14 +50,14 @@ const Index = () => {
 }
 ```
 
-### hydrate
+## hydrate
 ```js
 ReactDOM.hydrate(element, container[, callback])
 ```
 
 `hydrate` 作用和 `render` 相同，区别是 `hydrate` 是用于服务端渲染的，在 `ReactDOMServer` 渲染的容器中对 `HTML` 的内容进行 `hydrate` 操作。
 
-### createPortal
+## createPortal
 ```js
 ReactDOM.createPortal(child, container)
 ```
@@ -116,7 +116,7 @@ const Index = () => {
 }
 ```
 
-### findDOMNode
+## findDOMNode
 ```js
 ReactDOM.findDOMNode(component)
 ```
@@ -139,7 +139,7 @@ class Index extends React.Component {
 }
 ```
 
-### flushSync
+## flushSync
 `react` 会为更新任务设定不同的优先级，而`flushSync` 可以将回调函数里的更新任务放在一个较高优先级中
 
 ```js
@@ -178,7 +178,7 @@ const Index = () => {
 点击按钮后依次打印 `3 4 1`，原因是 `flushSync` 将 `3` 的更新任务优先级提高了，所以最先打印；`2` 和 `4` 被批量更新了，所以只打印了 `4`；最后打印的是定时器的 `1`。
 
 
-### unstable_batchedUpdates
+## unstable_batchedUpdates
 当一个异步操作之后需要 `setState` 多次时，组件会重新渲染多次，显然这不是我们想要的结果，而 `unstable_batchedUpdates` 就能解决这个问题，它可以将多个 `setState` 合并处理。
 
 ```js
@@ -241,7 +241,7 @@ const Index = () => {
     }
   ```
 
-### unmountComponentAtNode
+## unmountComponentAtNode
 ```js
 ReactDOM.unmountComponentAtNode(container)
 ```

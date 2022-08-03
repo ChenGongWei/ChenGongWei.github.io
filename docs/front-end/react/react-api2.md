@@ -8,12 +8,12 @@ categories: React学习笔记
 date: 2021-09-09 10:00:00
 ---
 
-## 工具类
+# React API（工具类）
 下面要复习的是 `React` 工具类 `API` 的用法：
 
 <img src="https://little_lu.gitee.io/images/blog/react/react-api/tools.png" width="700px">
 
-### createElement
+## createElement
 我们现在写 `React` 一般都是用 `JSX` 的格式，而我们写的 `JSX` 最终都会被 `babel` 用 `createElement` 编译成 `React` 元素形式。
 例如：
 ```js
@@ -45,7 +45,7 @@ React.createElement(
 * 第二个参数是一个对象，在 `dom` 类型中为属性，组件类型为 `props`
 * 后续参数为 `children` 子元素或子组件
   
-### cloneElement
+## cloneElement
 `cloneElement` 顾名思义就是用来克隆元素的，以 `element` 元素为样板克隆并返回新的 `React` 元素，返回元素的 `props` 是将新的 `props` 与原始元素的 `props` 浅层合并后的结果。
 
 ```js
@@ -79,7 +79,7 @@ React.cloneElement(
 * 第二个参数可以包含 `props`、`key`、`ref`
 * 后续参数为 `children` 子元素或子组件
   
-### createContext
+## createContext
 `createContext` 用于创建一个 `Context` 对象，当 `React` 渲染一个订阅了 `Context` 对象的组件，这个组件会从组件树中离自身最近的 `Provider` 中读取当前的 `Context` 的值，如果没有匹配到 `Provider`，那么就会获取 `defaultValue` 的值。
 ```js
 const MyContext = React.createContext(defaultValue)
@@ -119,7 +119,7 @@ function ProviderComponent() {
 }
 ```
 
-### createFactory
+## createFactory
 `createFactory` 用于返回生成制定类型 `React` 元素的函数，作用与 `createElement` 类似，类型参数可以使标签名字符串（像是 `'div'` 或 `'span'`），也可以是 `React` 组件类型，或是 `React Fragment` 类型。
 
 ```js
@@ -143,7 +143,7 @@ const Index = () => {
 
 此辅助函数已废弃，建议使用 `JSX` 语法或直接调用 `React.createElement` 来替代它。
 
-### createRef
+## createRef
 `createRef` 可以创建一个 `ref` 元素，附加在 `react` 元素上。
 
 ```js
@@ -195,7 +195,7 @@ const Index = () => {
 
 
 
-### isValidElement
+## isValidElement
 验证接收的参数是否为 `React` 元素，返回 `true` 或 `false`。
 
 ```js
@@ -225,7 +225,7 @@ const Index = () => {
 }
 ```
 
-### Children.map
+## Children.map
 ```js
 React.Children.map(children, function[(thisArg)])
 ```
@@ -269,7 +269,7 @@ const Index = () => {
 
 **注意：**如果 `children` 是一个 `Fragment` 对象，它会被视为单一子节点的情况处理，而不会被遍历。
 
-### Children.forEach
+## Children.forEach
 ```js
 React.Children.forEach(children, function[(thisArg)])
 ```
@@ -296,7 +296,7 @@ const Index = () => {
 }
 ```
 
-### Children.count
+## Children.count
 ```js
 React.Children.count(children)
 ```
@@ -323,7 +323,7 @@ const Index = () => {
 }
 ```
 
-### Children.only
+## Children.only
 ```js
 React.Children.only(children)
 ```
@@ -352,7 +352,7 @@ const Index = () => {
 ```
 `React.Children.only` 不接受 `React.Children.map` 的返回值，因为它是一个数组而不是 `React` 元素。
 
-### Children.toArray
+## Children.toArray
 ```js
 React.Children.toArray(children)
 ```
