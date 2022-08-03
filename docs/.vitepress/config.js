@@ -34,7 +34,7 @@ export default defineConfig({
             {
                 text: '其他',
                 items: [
-                    { text: 'LeetCode', link: '/leetcode/leetcode1' },
+                    { text: 'LeetCode', link: '/other/leetcode/leetcode1' },
                     { text: 'GitHub', link: '/other/github/syncToGitee'}
                 ]
             },
@@ -69,13 +69,21 @@ export default defineConfig({
                     ]
                 }
             ],
+            '/other/leetcode': [
+                {
+                    text: 'LeetCode',
+                    collapsible: true,
+                    items: [
+                        { text: '1、两数之和', link: '/other/leetcode/leetcode1' },
+                    ]
+                }
+            ],
             '/other/github': [
                 {
                     text: 'Github',
                     collapsible: true,
                     items: [
                         { text: 'Github 代码同步 Gitee', link: '/other/github/syncToGitee' },
-                        
                     ]
                 }
             ]
