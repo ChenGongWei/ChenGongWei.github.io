@@ -5,8 +5,11 @@ on:
     branches:
       - main
 
+# 任务
 jobs:
+  # 部署任务
   deploy:
+    # 服务器环境： 最新版 Ubuntu
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,3 +27,37 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/.vitepress/dist
+  
+  # 代码同步 gitee
+  push-to-mirror:
+    # 依赖项  需要部署结束再同步
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone
+        run: |
+          git init
+          git remote add origin https://github.com/${GITHUB_REPOSITORY}.git
+          git fetch --all
+          for branch in `git branch -a | grep remotes | grep -v HEAD`; do
+            git branch --track ${branch##*/} $branch
+          done
+        env:
+          GITHUB_REPOSITORY: ChenGongWei/ChenGongWei.github.io
+
+
+      - name: Push to Gitee
+        run: |
+          remote_repo="https://${GITEE_USERNAME}:${GITEE_PASSWORD}@gitee.com/${GITEE_REPOSITORY}.git"
+
+          git remote add gitee "${remote_repo}"
+          git show-ref # useful for debugging
+          git branch --verbose
+
+          # publish all
+          git push --all --force gitee
+          git push --tags --force gitee
+        env:
+          GITEE_REPOSITORY: Little_Lu/Little_Lu
+          GITEE_USERNAME: ${{ secrets.GITEE_USERNAME }}
+          GITEE_PASSWORD: ${{ secrets.GITEE_PASSWORD }}
