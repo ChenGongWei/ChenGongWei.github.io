@@ -9,6 +9,9 @@ export default defineConfig({
 
     head: [
         ['link', { rel: 'icon', href: '/logo.jpeg' }],
+        ['script', { src: 'https://lib.baomitu.com/medium-zoom/1.0.6/medium-zoom.min.js' }],
+        ['link', { rel: 'stylesheet', href: '/zoom.css' }],
+        ['script', { src: '/zoom.js' }]
     ],
 
     /**
