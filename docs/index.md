@@ -10,8 +10,8 @@ hero:
       text: React 笔记
       link: /front-end/react/react-api1
     - theme: alt
-      text: TypeScript 笔记
-      link: /front-end/typescript/ts-study1
+      text: LeetCode 笔记
+      link: /other/leetcode/leetcode1
 
 features:
   - icon: 💻

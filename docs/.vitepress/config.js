@@ -33,6 +33,12 @@ export default defineConfig({
                 ]
             },
             {
+                text: '工程化',
+                items: [
+                    { text: 'Git', link: '/engine/git/' }
+                ]
+            },
+            {
                 text: '其他',
                 items: [
                     { text: '工具', link: '/other/tools/packetcapture' },
