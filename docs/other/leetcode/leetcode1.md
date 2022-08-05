@@ -1,11 +1,7 @@
 ---
 title: LeetCode1、两数之和
-excerpt: 两数之和 - 给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。
-index_img: https://gitee.com/Little_Lu/images/raw/master/blog/leetcode/leetcode1/bg.jpeg
-banner_img: https://gitee.com/Little_Lu/images/raw/master/blog/leetcode/leetcode1/bg.jpeg
 tags: [LeetCode, 学习笔记]
 categories: LeetCode刷题记录
-date: 2022-02-27 10:00:00
 ---
 
 # LeetCode1、两数之和
@@ -58,9 +54,6 @@ var twoSum = function(nums, target) {
     }
 };
 ```
-提交代码，完美通过😂
-
-![image.png](https://gitee.com/Little_Lu/images/raw/master/blog/leetcode/leetcode1/res1.webp)
 
 ## 优化
 看到执行用时和内存消耗都远不如别人，就去看了下别人的题解
@@ -87,5 +80,3 @@ var twoSum = function(nums, target) {
     }
 };
 ```
-![image.png](https://gitee.com/Little_Lu/images/raw/master/blog/leetcode/leetcode1/res2.webp)
-速度确实比我上一次的快了不少，之前还真没想过 `Map` 还能这样用，学到了
