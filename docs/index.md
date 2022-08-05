@@ -22,5 +22,5 @@ features:
     details: Webpack、Babel、Eslint、Git、CI/CD
   - icon: 📦
     title: 其他
-    details: Node、Nginx、Linux、SQL
+    details: LeetCode、Node、Nginx、Linux、SQL
 ---

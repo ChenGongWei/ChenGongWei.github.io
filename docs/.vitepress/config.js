@@ -35,11 +35,12 @@ export default defineConfig({
             {
                 text: '其他',
                 items: [
+                    { text: '工具', link: '/other/tools/packetcapture' },
                     { text: 'LeetCode', link: '/other/leetcode/leetcode1' },
                     { text: 'GitHub', link: '/other/github/syncToGitee' }
                 ]
             },
-            { text: '关于', link: '/about' },
+            // { text: '关于', link: '/about' },
         ],
         // 侧边导航
         sidebar: {
@@ -67,6 +68,13 @@ export default defineConfig({
                         { text: 'React Api - react-dom', link: '/front-end/react/react-api4' },
                         { text: '自定义 hook 实现 redux', link: '/front-end/react/useRedux' },
 
+                    ]
+                }
+            ],
+            '/other/tools': [
+                {
+                    items: [
+                        { text: '抓包工具', link: '/other/tools/packetcapture' }
                     ]
                 }
             ],
