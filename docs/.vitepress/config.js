@@ -97,6 +97,11 @@ export default defineConfig({
                         { text: '3、无重复字符的最长子串', link: '/other/leetcode/leetcode3' },
                         { text: '4、寻找两个正序数组的中位数', link: '/other/leetcode/leetcode4' },
                         { text: '5、最长回文子串', link: '/other/leetcode/leetcode5' },
+                        { text: '6、Z 字形变换', link: '/other/leetcode/leetcode6' },
+                        { text: '7、整数反转', link: '/other/leetcode/leetcode7' },
+                        { text: '8、字符串转换整数(atoi)', link: '/other/leetcode/leetcode8' },
+                        { text: '9、回文数', link: '/other/leetcode/leetcode9' },
+                        { text: '11、盛最多水的容器', link: '/other/leetcode/leetcode11' },
                     ]
                 }
             ],
@@ -126,5 +131,14 @@ export default defineConfig({
             text: '在GitHub上编辑此页'
         },
         lastUpdatedText: '上次更新',
+        outlineTitle: '目录',
+    },
+
+    markdown: {
+        lineNumbers: true,
+        config: (md) => {
+            // use more markdown-it plugins!
+            md.use(require('markdown-it-sup'))
+          }
     }
 })

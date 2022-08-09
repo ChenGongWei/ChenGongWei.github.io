@@ -16,7 +16,7 @@ categories: LeetCode刷题记录
 
 *示例：*
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a779365e7d3547568dc842722df07c18~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](img/leetcode_2.jpg)
 ```js
 输入： l1 = [2,4,3], l2 = [5,6,4]
 输出： [7,0,8]
@@ -72,7 +72,9 @@ var getSum = function(l1, l2, m = 0) {
         const sum = (l1?.val || 0) + (l2?.val || 0) + m
         const n = sum > 9 ? 1 : 0
         ln = new ListNode(sum > 9 ? (sum - 10) : sum)
-        ln.next = (l1 || l2) ? getSum(l1?.next || null, l2?.next || null, n) : null
+        ln.next = (l1 || l2) 
+            ? getSum(l1?.next || null, l2?.next || null, n) 
+            : null
     }
     return ln
 }

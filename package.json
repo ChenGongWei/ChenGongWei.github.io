@@ -19,6 +19,7 @@
   "dependencies": {
     "commitizen": "^4.2.5",
     "cz-customizable": "^6.9.1",
+    "markdown-it-sup": "^1.0.0",
     "vitepress": "^1.0.0-alpha.4"
   }
 }
